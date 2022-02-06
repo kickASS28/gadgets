@@ -33,7 +33,7 @@ const HealthPage = () => {
                 data-icon="chart-line"
                 role="img"
                 viewBox="0 0 512 512"
-                width="70"
+                width="74"
                 height="80"
               >
                 <path
