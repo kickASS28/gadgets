@@ -1,0 +1,201 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.card {
+  width: 50%;
+  margin: 0 auto;
+  background-image: linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.card h1 {
+  color: #fff;
+  letter-spacing: 0.8px;
+  margin: 0;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.data h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.data h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.details_list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 85%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  gap: 0.5rem;
+}
+
+.details_list li {
+  display: flex;
+  align-items: center;
+}
+
+.details_list span {
+  padding: 0.8rem 1.5rem;
+  width: 50%;
+  background-color: #ddd;
+}
+.details_list p {
+  margin: 0;
+  padding: 0.8rem 1.5rem;
+  width: 50%;
+  background-color: #fff;
+}
+
+.actions {
+  margin-top: 2rem;
+  width: 85%;
+}
+
+.actions button {
+  width: 100%;
+  padding: 0.6rem 1.5rem;
+  color: #fff;
+  background-color: #54b4eb;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: large;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.actions button:hover,
+.actions button:active {
+  border: 1px solid black;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.507);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 35%;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  padding: 3rem;
+  z-index: 100;
+}
+
+.modal_title {
+  color: #54b4eb;
+  margin: 0;
+}
+
+.modal_inputs {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-top: 1px solid #54b4eb;
+}
+
+.input_field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input_field label,
+.input_field input {
+  text-align: left;
+  margin: 0;
+  font-size: large;
+  padding: 0.35rem 0;
+}
+
+.modal_actions {
+  border-top: 1px solid #54b4eb;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: right;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.modal_actions button {
+  padding: 0.35rem 1rem;
+  cursor: pointer;
+  background-color: #54b4eb;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 0.2rem;
+  font-size: large;
+}
+
+.modal_actions button:active,
+.modal_actions button:hover {
+  background-color: #1d9ce5;
+}
+
+@media screen and (max-width: 980px) {
+  .card {
+    width: 65%;
+  }
+  .details_list span,
+  .details_list p {
+    font-size: small;
+  }
+  .modal {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 690px) {
+  .card {
+    width: 100%;
+  }
+  .details_list {
+    width: 100%;
+  }
+  .modal {
+    width: 60%;
+    padding: 1.5rem;
+    height: auto;
+  }
+  .modal_title h1 {
+    font-size: larger;
+  }
+  .modal_inputs {
+    gap: 0.5rem;
+  }
+  .modal_actions {
+    flex-direction: column;
+  }
+  .modal_actions button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,140 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container h1 {
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.app_container,
+.app_container2 {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  border-top: 1px dashed gray;
+  border-bottom: 1px dashed gray;
+}
+
+.app_container2 {
+  width: 80%;
+  display: flex;
+}
+
+.app_container h3 {
+  text-align: center;
+  margin: 0;
+  padding: 1rem;
+}
+
+.app_flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.traclorie,
+.bmicalc {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+
+.app_flex h5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.description,
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  width: 40%;
+}
+
+.description p {
+  padding: 0;
+  margin: 0;
+}
+
+.actions a {
+  transition: all 0.3s ease;
+}
+
+.actions a:hover,
+.actions a:active {
+  border-bottom: 2px solid black;
+}
+
+@media screen and (max-width: 900px) {
+  .app_container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app_container {
+    margin-top: 2.5rem;
+  }
+
+  .app_flex {
+    margin-top: 1.5rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .app_flex h5 {
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    justify-content: left;
+    margin: 0;
+  }
+  .app_flex h5 svg {
+    width: 20%;
+    height: 20%;
+  }
+  .traclorie,
+  .bmicalc {
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 55%;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.4);
+  }
+  .description {
+    width: 100%;
+  }
+  .description p {
+    margin: 1rem 0;
+    width: 100%;
+  }
+  .actions {
+    margin-bottom: 1rem;
+    display: inline;
+  }
+  .actions a {
+    text-align: left;
+  }
+}

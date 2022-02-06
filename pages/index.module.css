@@ -1,0 +1,88 @@
+.container {
+  width: 80%;
+  text-align: center;
+  margin: 3rem auto;
+  margin-top: 0;
+}
+
+.title {
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.pagedesc h5 {
+  margin-top: 1rem;
+}
+
+.pagedesc p {
+  margin-top: 3rem;
+  margin-bottom: 0;
+  letter-spacing: 1.5px;
+}
+
+.sub_title {
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: medium;
+  margin-top: 5.5rem;
+}
+
+.verticals {
+  width: 100%;
+  display: grid;
+  margin-top: 4.5rem;
+  gap: 2.5rem;
+  margin-left: 4.5rem;
+  margin-bottom: 4.5rem;
+}
+
+.health,
+.finance,
+.well_being,
+.entertainment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.health {
+  grid-column: 2;
+  grid-row: 1/2;
+}
+
+.finance {
+  grid-column: 3;
+  grid-row: 1/2;
+}
+
+.well_being {
+  grid-column: 4;
+  grid-row: 1/2;
+}
+
+.entertainment {
+  grid-column: 5;
+  grid-row: 1/2;
+}
+
+.name {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.name a {
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.name a:hover,
+.name a:active {
+  border-bottom: 2px solid currentColor;
+}
+
+.description {
+  line-height: 2;
+}

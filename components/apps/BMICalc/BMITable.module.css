@@ -1,0 +1,36 @@
+.table_container {
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.table {
+  text-align: center;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.table tr td,
+.table tr th {
+  text-align: left;
+}
+
+@media screen and (max-width: 871px) {
+  .table_container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .table_container {
+    width: 100%;
+  }
+}
