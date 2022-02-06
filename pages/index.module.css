@@ -86,3 +86,58 @@
 .description {
   line-height: 2;
 }
+
+@media screen and (max-width: 1500px) {
+  .container {
+    width: 95%;
+  }
+  .verticals {
+    gap: 1rem;
+  }
+  .description {
+    line-height: 2;
+    width: 70%;
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .verticals {
+    margin-left: 0;
+    margin: 3rem 2rem;
+    width: 90%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+  }
+  .health {
+    grid-column: 1;
+    grid-row: 1/2;
+  }
+
+  .finance {
+    grid-column: 2;
+    grid-row: 1/2;
+  }
+
+  .well_being {
+    grid-column: 1;
+    grid-row: 2/3;
+  }
+
+  .entertainment {
+    grid-column: 2;
+    grid-row: 2/3;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .verticals {
+    margin: 2rem 1.5rem;
+    width: 95%;
+  }
+  .description {
+    line-height: 2;
+    width: 80%;
+    font-size: small;
+  }
+}

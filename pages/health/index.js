@@ -50,7 +50,7 @@ const HealthPage = () => {
               </p>
             </div>
             <div className={classes.actions}>
-              <Link href="/health/tracalorie">Take me there 🠖</Link>
+              <Link href="/health/tracalorie">Take me there &#x02192;</Link>
             </div>
           </div>
           <div className={classes.bmicalc}>
@@ -78,7 +78,7 @@ const HealthPage = () => {
               </p>
             </div>
             <div className={classes.actions}>
-              <Link href="/health/bmicalc">Take me there 🠖</Link>
+              <Link href="/health/bmicalc">Take me there &#x02192;</Link>
             </div>
           </div>
         </div>

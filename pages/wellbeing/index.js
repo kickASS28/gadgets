@@ -50,7 +50,7 @@ const WellbeingPage = () => {
               </p>
             </div>
             <div className={classes.actions}>
-              <Link href="/wellbeing/weatherjs">Take me there 🠖</Link>
+              <Link href="/wellbeing/weatherjs">Take me there &#x02192;</Link>
             </div>
           </div>
           <div className={classes.bmicalc}>
@@ -75,7 +75,7 @@ const WellbeingPage = () => {
               <p>Sports news, latest match results, live scores, and more.</p>
             </div>
             <div className={classes.actions}>
-              <Link href="/wellbeing/sports">Take me there 🠖</Link>
+              <Link href="/wellbeing/sports">Take me there &#x02192;</Link>
             </div>
           </div>
         </div>

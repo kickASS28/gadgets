@@ -43,7 +43,7 @@ const Home = () => {
             </svg>
           </div>
           <div className={classes.name}>
-            <Link href="/health">Health 🠖</Link>
+            <Link href="/health">Health &#x02192;</Link>
           </div>
           <div className={classes.description}>
             <p>
@@ -69,7 +69,7 @@ const Home = () => {
             </svg>
           </div>
           <div className={classes.name}>
-            <Link href="/finance">Finance 🠖</Link>
+            <Link href="/finance">Finance &#x02192;</Link>
           </div>
           <div className={classes.description}>
             <p>
@@ -95,10 +95,12 @@ const Home = () => {
             </svg>
           </div>
           <div className={classes.name}>
-            <Link href="/wellbeing">Well-Being 🠖</Link>
+            <Link href="/wellbeing">Well-Being &#x02192;</Link>
           </div>
           <div className={classes.description}>
-            <p>Detailed weather report, sports, and other.</p>
+            <p>
+              Detailed weather report, Scientic weather data, sports, and other.
+            </p>
           </div>
         </div>
         <div className={classes.entertainment}>
@@ -118,7 +120,7 @@ const Home = () => {
             </svg>
           </div>
           <div className={classes.name}>
-            <Link href="/entertainment">Entertainment 🠖</Link>
+            <Link href="/entertainment">Entertainment &#x02192;</Link>
           </div>
           <div className={classes.description}>
             <p>

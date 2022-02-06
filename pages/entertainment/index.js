@@ -48,7 +48,9 @@ const EntertainmentPage = () => {
               </p>
             </div>
             <div className={classes.actions}>
-              <Link href="/entertainment/kick-tac-toe">Take me there 🠖</Link>
+              <Link href="/entertainment/kick-tac-toe">
+                Take me there &#x02192;
+              </Link>
             </div>
           </div>
           <div className={classes.bmicalc}>
@@ -75,7 +77,7 @@ const EntertainmentPage = () => {
               </p>
             </div>
             <div className={classes.actions}>
-              <Link href="/entertainment/chess">Take me there 🠖</Link>
+              <Link href="/entertainment/chess">Take me there &#x02192;</Link>
             </div>
           </div>
         </div>

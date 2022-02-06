@@ -49,7 +49,9 @@ const FinancePage = () => {
               </p>
             </div>
             <div className={classes.actions}>
-              <Link href="/finance/loanCalculator">Take me there 🠖</Link>
+              <Link href="/finance/loanCalculator">
+                Take me there &#x02192;
+              </Link>
             </div>
           </div>
           <div className={classes.bmicalc}>
@@ -75,7 +77,7 @@ const FinancePage = () => {
               </p>
             </div>
             <div className={classes.actions}>
-              <Link href="/finance/news">Take me there 🠖</Link>
+              <Link href="/finance/news">Take me there &#x02192;</Link>
             </div>
           </div>
         </div>
