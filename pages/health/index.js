@@ -34,7 +34,7 @@ const HealthPage = () => {
                 role="img"
                 viewBox="0 0 512 512"
                 width="74"
-                height="80"
+                height="84"
               >
                 <path
                   fill="currentColor"
