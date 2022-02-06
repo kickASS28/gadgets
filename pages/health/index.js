@@ -45,7 +45,7 @@ const HealthPage = () => {
             </h5>
             <div className={classes.description}>
               <p>
-                Track your calorie intake, and compare with optimum calorie
+                Track your calorie intake, and compare with the optimum calorie
                 inake.
               </p>
             </div>
