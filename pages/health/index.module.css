@@ -88,6 +88,7 @@
 @media screen and (max-width: 600px) {
   .app_container {
     margin-top: 2.5rem;
+    width: 94%;
   }
 
   .app_flex {
@@ -95,7 +96,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .app_flex h5 {

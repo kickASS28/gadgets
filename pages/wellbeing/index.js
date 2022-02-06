@@ -72,7 +72,9 @@ const WellbeingPage = () => {
               Sports App
             </h5>
             <div className={classes.description}>
-              <p>Sports news, latest match results, live scores, and more.</p>
+              <p>
+                Sports news, latest match results, live scores, and much more.
+              </p>
             </div>
             <div className={classes.actions}>
               <Link href="/wellbeing/sports">Take me there &#x02192;</Link>

@@ -14,11 +14,17 @@ const refBoard = {
 };
 
 const KickTacToePage = () => {
-  const [turn, setTurn] = useState("X");
+  const [turn, setTurn] = useState("");
 
   const [board, setboard] = useState(refBoard);
 
   const [header, setHeader] = useState("Start Playing Now!");
+
+  const setMarker = (event) => {
+    const marker =
+      event.target.options[event.target.options.selectedIndex].value;
+    setTurn(marker);
+  };
 
   const checkCombinations = (board, check) => {
     return (
@@ -86,37 +92,69 @@ const KickTacToePage = () => {
       box9: "",
     };
     setboard(refBoard);
-    setTurn("X");
+    setTurn("");
     setHeader("Start Playing Now!");
   };
 
   return (
     <div className={classes.container}>
       <h2>{header}</h2>
-      <div className={classes.playbox}>
-        <table className={classes.game}>
-          <tbody>
-            <tr>
-              <td onClick={onClickHandler.bind(null, "box1")}>{board.box1}</td>
-              <td onClick={onClickHandler.bind(null, "box2")}>{board.box2}</td>
-              <td onClick={onClickHandler.bind(null, "box3")}>{board.box3}</td>
-            </tr>
-            <tr>
-              <td onClick={onClickHandler.bind(null, "box4")}>{board.box4}</td>
-              <td onClick={onClickHandler.bind(null, "box5")}>{board.box5}</td>
-              <td onClick={onClickHandler.bind(null, "box6")}>{board.box6}</td>
-            </tr>
-            <tr>
-              <td onClick={onClickHandler.bind(null, "box7")}>{board.box7}</td>
-              <td onClick={onClickHandler.bind(null, "box8")}>{board.box8}</td>
-              <td onClick={onClickHandler.bind(null, "box9")}>{board.box9}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div className={classes.actions}>
-        <button onClick={clearHandler}>Reset</button>
-      </div>
+      {turn === "" && (
+        <div className={classes.input_box}>
+          <label>Select Marker</label>
+          <select onChange={setMarker} defaultValue="">
+            <option></option>
+            <option>X</option>
+            <option>O</option>
+          </select>
+        </div>
+      )}
+      {turn !== "" && (
+        <div className={classes.playbox}>
+          <table className={classes.game}>
+            <tbody>
+              <tr>
+                <td onClick={onClickHandler.bind(null, "box1")}>
+                  {board.box1}
+                </td>
+                <td onClick={onClickHandler.bind(null, "box2")}>
+                  {board.box2}
+                </td>
+                <td onClick={onClickHandler.bind(null, "box3")}>
+                  {board.box3}
+                </td>
+              </tr>
+              <tr>
+                <td onClick={onClickHandler.bind(null, "box4")}>
+                  {board.box4}
+                </td>
+                <td onClick={onClickHandler.bind(null, "box5")}>
+                  {board.box5}
+                </td>
+                <td onClick={onClickHandler.bind(null, "box6")}>
+                  {board.box6}
+                </td>
+              </tr>
+              <tr>
+                <td onClick={onClickHandler.bind(null, "box7")}>
+                  {board.box7}
+                </td>
+                <td onClick={onClickHandler.bind(null, "box8")}>
+                  {board.box8}
+                </td>
+                <td onClick={onClickHandler.bind(null, "box9")}>
+                  {board.box9}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      )}
+      {turn !== "" && (
+        <div className={classes.actions}>
+          <button onClick={clearHandler}>Reset</button>
+        </div>
+      )}
     </div>
   );
 };

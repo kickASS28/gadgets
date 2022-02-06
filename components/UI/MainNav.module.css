@@ -57,14 +57,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1rem 3rem;
+  padding: 0.5rem 3rem;
   align-items: center;
   color: white;
   display: none;
 }
 
 .placeholder_nav_menu_icon {
-  padding: 0.25rem 0.5rem;
+  padding: 0.12rem 0.5rem;
   border: 1px solid white;
   border-radius: 0.2rem;
 }
@@ -79,7 +79,7 @@
   top: 0;
   left: 0;
   height: 100vh;
-  width: 30%;
+  width: 40%;
   background-color: black;
   z-index: 1000;
   backdrop-filter: black;
@@ -123,11 +123,18 @@
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
-  height: 1.7rem;
 }
 
 .mobile_nav_icon_container p {
   margin: 0;
+}
+
+.mobile_nav_brand_link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 @media screen and (max-width: 900px) {
