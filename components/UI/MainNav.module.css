@@ -123,6 +123,11 @@
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
+  height: 2rem;
+}
+
+.placeholder_nav_menu_icon {
+  padding: 0;
 }
 
 .mobile_nav_icon_container p {
