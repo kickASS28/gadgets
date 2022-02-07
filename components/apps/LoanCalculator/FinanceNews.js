@@ -19,7 +19,7 @@ const FinanceNews = () => {
         }
       )
         .then((res) => {
-          res.json();
+          return res.json();
         })
         .then((result) => {
           const newsArray = result.data.mostPopularEntries.assets;

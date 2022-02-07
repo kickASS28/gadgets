@@ -13,7 +13,7 @@ const FinancePage = () => {
           data-icon="donate"
           role="img"
           viewBox="0 0 512 512"
-          width="100"
+          width="70"
         >
           <path
             fill="rgb(178, 201, 47)"
@@ -32,8 +32,7 @@ const FinancePage = () => {
                 data-icon="percentage"
                 role="img"
                 viewBox="0 0 384 512"
-                width="52"
-                height="50"
+                width="36"
               >
                 <path
                   fill="#343a40"
@@ -62,7 +61,7 @@ const FinancePage = () => {
                 data-icon="newspaper"
                 role="img"
                 viewBox="0 0 576 512"
-                width="76"
+                width="60"
               >
                 <path
                   fill="#343a40"

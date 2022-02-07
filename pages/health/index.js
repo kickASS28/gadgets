@@ -13,7 +13,8 @@ const HealthPage = () => {
           data-icon="heartbeat"
           role="img"
           viewBox="0 0 512 512"
-          width="100"
+          width="70"
+          height="70"
         >
           <path
             fill="rgb(233, 47, 47)"
@@ -33,8 +34,7 @@ const HealthPage = () => {
                 data-icon="chart-line"
                 role="img"
                 viewBox="0 0 512 512"
-                width="70"
-                height="80"
+                width="52"
               >
                 <path
                   fill="currentColor"
@@ -61,8 +61,7 @@ const HealthPage = () => {
                 data-icon="calculator"
                 role="img"
                 viewBox="0 0 448 512"
-                width="60"
-                height="80"
+                width="46"
               >
                 <path
                   fill="currentColor"

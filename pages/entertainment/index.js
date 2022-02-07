@@ -13,15 +13,15 @@ const EntertainmentPage = () => {
           data-icon="dice-three"
           role="img"
           viewBox="0 0 448 512"
-          width="100"
-          height="100"
+          width="70"
+          height="70"
         >
           <path
             fill="rgb(165, 47, 201)"
             d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM128 192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm96 96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm96 96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"
           />
         </svg>
-        <h4>Entertainment is an art that brings colors into life.</h4>
+        <h3>Entertainment is an art that brings colors into life.</h3>
       </div>
       <div className={classes.app_container}>
         <div className={classes.app_flex}>
