@@ -4,6 +4,7 @@ let refrence = 0;
 const FinanceNews = () => {
   const [news, setNews] = useState([]);
   const [newsSlice, setNewsSlice] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const getNews = () => {
@@ -26,6 +27,7 @@ const FinanceNews = () => {
           const slice = newsArray.slice(0, 5);
           setNews(newsArray);
           setNewsSlice(slice);
+          setIsLoading(false);
         })
         .catch((err) => {
           const slice = [
@@ -40,6 +42,7 @@ const FinanceNews = () => {
             },
           ];
           setNewsSlice(slice);
+          setIsLoading(false);
           console.log(err);
         });
     };
@@ -98,6 +101,7 @@ const FinanceNews = () => {
   return (
     <div className={classes.container}>
       <h2>Finance News</h2>
+      {isLoading && <h4>Loading...</h4>}
       <div className={classes.news_container}>
         {newsSlice.map((n) => {
           return (
