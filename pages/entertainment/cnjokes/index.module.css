@@ -35,10 +35,13 @@
   padding: 0.5rem 1rem;
   font-size: medium;
   margin-top: 1rem;
+  cursor: pointer;
 }
 
 .joke_results {
   margin-top: 1rem;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .jokes {

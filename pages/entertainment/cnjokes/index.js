@@ -11,26 +11,41 @@ const SoprtsPage = () => {
   };
 
   useEffect(() => {
-    const getJokes = async () => {
-      const responce = await fetch(
-        `http://api.icndb.com/jokes/random/${number}`
-      );
-      if (responce.status !== 200) {
-        return;
-      }
-      const data = await responce.json();
-      setJokes(data.value);
-    };
-    getJokes();
+    fetch(`https://api.icndb.com/jokes/random/${number}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setJokes(data.value);
+      })
+      .catch((err) => {
+        console.log(err);
+        setJokes([
+          {
+            id: 0,
+            joke: "Chuck Norris is currently out of universe, Please try in some time or check your internet connection",
+          },
+        ]);
+      });
   }, []);
 
   const getJokes = async () => {
-    const responce = await fetch(`http://api.icndb.com/jokes/random/${number}`);
-    if (responce.status !== 200) {
-      return;
-    }
-    const data = await responce.json();
-    setJokes(data.value);
+    fetch(`https://api.icndb.com/jokes/random/${number}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setJokes(data.value);
+      })
+      .catch((err) => {
+        console.log(err);
+        setJokes([
+          {
+            id: 0,
+            joke: "Chuck Norris is currently out of universe, Please try in some time or check your internet connection",
+          },
+        ]);
+      });
   };
 
   return (

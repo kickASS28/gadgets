@@ -6,8 +6,8 @@ const FinanceNews = () => {
   const [newsSlice, setNewsSlice] = useState([]);
 
   useEffect(() => {
-    const getNews = async () => {
-      const responce = await fetch(
+    const getNews = () => {
+      fetch(
         "https://cnbc.p.rapidapi.com/news/v2/list-trending?tag=Articles&count=30",
         {
           method: "GET",
@@ -17,25 +17,42 @@ const FinanceNews = () => {
               "aa0189ba32mshf25eadacd4bbc37p108017jsndb59f85811c8",
           },
         }
-      );
-      if (responce.status !== 200) {
-        console.log(error);
-        return;
-      }
-      const result = await responce.json();
-      const newsArray = result.data.mostPopularEntries.assets;
-      const slice = newsArray.slice(0, 5);
-      setNews(newsArray);
-      setNewsSlice(slice);
+      )
+        .then((res) => {
+          res.json();
+        })
+        .then((result) => {
+          const newsArray = result.data.mostPopularEntries.assets;
+          const slice = newsArray.slice(0, 5);
+          setNews(newsArray);
+          setNewsSlice(slice);
+        })
+        .catch((err) => {
+          const slice = [
+            {
+              id: "0",
+              url: "https://www.google.com",
+              headline: "Couldn't connect to News servers!",
+              authorFormatted: "Admin",
+              promoImage: { url: "" },
+              description:
+                "Apologies, we are not able to connect to the server to fetch news. This might happen if server is under maintainance or there is no internet connection.",
+            },
+          ];
+          setNewsSlice(slice);
+          console.log(err);
+        });
     };
     getNews();
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100);
   };
 
   const changeSlice = () => {
