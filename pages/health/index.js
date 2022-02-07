@@ -33,8 +33,8 @@ const HealthPage = () => {
                 data-icon="chart-line"
                 role="img"
                 viewBox="0 0 512 512"
-                width="74"
-                height="88"
+                width="70"
+                height="80"
               >
                 <path
                   fill="currentColor"
@@ -45,8 +45,8 @@ const HealthPage = () => {
             </h5>
             <div className={classes.description}>
               <p>
-                Track your daily calorie intake, and compare with the optimum
-                calorie inake.
+                Track your calorie intake, and compare with optimum calorie
+                inake.
               </p>
             </div>
             <div className={classes.actions}>

@@ -47,7 +47,7 @@ const MainNav = () => {
           </li>
         </ul>
         <div className={classes.actions}>
-          <Link href="/login">Login</Link>
+          <p> </p>
         </div>
       </nav>
       {!mobileNavIsVisible && (

@@ -51,7 +51,6 @@
 .input_box label {
   padding: 0.5rem;
   font-size: 1.2rem;
-  width: 35%;
 }
 
 @media screen and (max-width: 650px) {
@@ -70,7 +69,6 @@
   .input_box select,
   .input_box label {
     padding: 0.3rem;
-    font-size: 0.5rem;
-    width: 40%;
+    font-size: 0.8rem;
   }
 }
