@@ -68,6 +68,10 @@ const WeatherJSAPP = () => {
           name="description"
           content="Get all weather details, Scientific weather data and realtime weather updates."
         />
+        <link
+          rel="icon"
+          href="https://www.freeiconspng.com/uploads/tool-icon-20.png"
+        />
       </Head>
       <div className={classes.container}>
         <div className={classes.card}>

@@ -12,6 +12,10 @@ const TracaloriePage = () => {
           name="description"
           content="Track your calorie intake and compare it with optimum calorie intake per age."
         />
+        <link
+          rel="icon"
+          href="https://www.freeiconspng.com/uploads/tool-icon-20.png"
+        />
       </Head>
       <div className={classes.container}>
         <Tracalorie />

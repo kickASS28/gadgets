@@ -13,6 +13,10 @@ const FinancePage = () => {
           name="description"
           content="One App for your financial needs. (Loan-Interest Calculator, Financ news and updates)"
         />
+        <link
+          rel="icon"
+          href="https://www.freeiconspng.com/uploads/tool-icon-20.png"
+        />
       </Head>
       <div className={classes.container}>
         <h1>Finance</h1>

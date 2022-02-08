@@ -11,6 +11,10 @@ const loanCalculatorPage = () => {
           name="description"
           content="Calculte Total Amount, Total Interest and montly installment amout based on interest rate and time to repay."
         />
+        <link
+          rel="icon"
+          href="https://www.freeiconspng.com/uploads/tool-icon-20.png"
+        />
       </Head>
       <LoanCalculator />
     </Fragment>

@@ -12,6 +12,10 @@ const HealthPage = () => {
           name="description"
           content="One App that holds all health your needs. (Calorie Tracker, BMI Calculator, more)"
         />
+        <link
+          rel="icon"
+          href="https://www.freeiconspng.com/uploads/tool-icon-20.png"
+        />
       </Head>
       <div className={classes.container}>
         <h1>Health</h1>

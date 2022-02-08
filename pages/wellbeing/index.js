@@ -13,6 +13,10 @@ const WellbeingPage = () => {
           name="description"
           content="One App for your well being. (Track Weather, Weather reports, Sports news, and updates)"
         />
+        <link
+          rel="icon"
+          href="https://www.freeiconspng.com/uploads/tool-icon-20.png"
+        />
       </Head>
       <div className={classes.container}>
         <h1>Well-Being</h1>

@@ -65,6 +65,10 @@ const SoprtsPage = () => {
           name="description"
           content="Laugh a lot with Chuck Norris jokes"
         />
+        <link
+          rel="icon"
+          href="https://www.freeiconspng.com/uploads/tool-icon-20.png"
+        />
       </Head>
       <div className={classes.container}>
         <h2>Joke Genrator</h2>

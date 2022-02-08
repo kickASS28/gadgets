@@ -12,6 +12,10 @@ const BMICalCPage = () => {
           name="description"
           content="Calculate your body mass index(BMI), compare your BMI to find what your body needs."
         />
+        <link
+          rel="icon"
+          href="https://www.freeiconspng.com/uploads/tool-icon-20.png"
+        />
       </Head>
       <div className={classes.container}>
         <BMICalC />

@@ -13,6 +13,10 @@ const EntertainmentPage = () => {
           name="description"
           content="One App for your Entertainment needs. (Games, communities, jokes and more.)"
         />
+        <link
+          rel="icon"
+          href="https://www.freeiconspng.com/uploads/tool-icon-20.png"
+        />
       </Head>
       <div className={classes.container}>
         <h1>Entertainment</h1>
