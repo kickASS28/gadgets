@@ -75,11 +75,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 150vh;
   width: 40%;
   background-color: black;
   z-index: 1000;
-  backdrop-filter: black;
 }
 
 .MobileNavOpen {

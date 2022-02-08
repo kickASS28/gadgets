@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import classes from "./index.module.css";
+import Head from "next/head";
 
 const WeatherJSAPP = () => {
   const [gotData, setGotData] = useState(false);
@@ -61,6 +62,13 @@ const WeatherJSAPP = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>WeatherJS</title>
+        <meta
+          name="description"
+          content="Get all weather details, Scientific weather data and realtime weather updates."
+        />
+      </Head>
       <div className={classes.container}>
         <div className={classes.card}>
           <h1>WeatherJS</h1>
