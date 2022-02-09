@@ -1,4 +1,5 @@
 import classes from "./CalorieTable.module.css";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const CalorieTable = (props) => {
   const func = (total, meal) => {
@@ -9,44 +10,50 @@ const CalorieTable = (props) => {
   return (
     <div className={classes.meal_array}>
       <h3>Meals</h3>
-      <ul className={classes.mealList}>
+      <TransitionGroup className={classes.mealList} component="ul">
         {props.meals.map((meal) => {
           return (
-            <li className={classes.mealItem} key={meal.name}>
-              <div className={classes.mealItem_meal_name}>
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-icon="hamburger"
-                  role="img"
-                  viewBox="0 0 512 512"
-                  width="15"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M464 256H48a48 48 0 0 0 0 96h416a48 48 0 0 0 0-96zm16 128H32a16 16 0 0 0-16 16v16a64 64 0 0 0 64 64h352a64 64 0 0 0 64-64v-16a16 16 0 0 0-16-16zM58.64 224h394.72c34.57 0 54.62-43.9 34.82-75.88C448 83.2 359.55 32.1 256 32c-103.54.1-192 51.2-232.18 116.11C4 180.09 24.07 224 58.64 224zM384 112a16 16 0 1 1-16 16 16 16 0 0 1 16-16zM256 80a16 16 0 1 1-16 16 16 16 0 0 1 16-16zm-128 32a16 16 0 1 1-16 16 16 16 0 0 1 16-16z"
-                  />
-                </svg>
+            <CSSTransition
+              key={meal.name}
+              classNames="placeholdernav"
+              timeout={300}
+            >
+              <li className={classes.mealItem}>
+                <div className={classes.mealItem_meal_name}>
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    data-icon="hamburger"
+                    role="img"
+                    viewBox="0 0 512 512"
+                    width="15"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M464 256H48a48 48 0 0 0 0 96h416a48 48 0 0 0 0-96zm16 128H32a16 16 0 0 0-16 16v16a64 64 0 0 0 64 64h352a64 64 0 0 0 64-64v-16a16 16 0 0 0-16-16zM58.64 224h394.72c34.57 0 54.62-43.9 34.82-75.88C448 83.2 359.55 32.1 256 32c-103.54.1-192 51.2-232.18 116.11C4 180.09 24.07 224 58.64 224zM384 112a16 16 0 1 1-16 16 16 16 0 0 1 16-16zM256 80a16 16 0 1 1-16 16 16 16 0 0 1 16-16zm-128 32a16 16 0 1 1-16 16 16 16 0 0 1 16-16z"
+                    />
+                  </svg>
 
-                <span>{meal.name}</span>
-              </div>
-              <div className={classes.mealItem_meal_calories}>
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-icon="fire"
-                  role="img"
-                  viewBox="0 0 384 512"
-                  width="15"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M216 23.86c0-23.8-30.65-32.77-44.15-13.04C48 191.85 224 200 224 288c0 35.63-29.11 64.46-64.85 63.99-35.17-.45-63.15-29.77-63.15-64.94v-85.51c0-21.7-26.47-32.23-41.43-16.5C27.8 213.16 0 261.33 0 320c0 105.87 86.13 192 192 192s192-86.13 192-192c0-170.29-168-193-168-296.14z"
-                  />
-                </svg>
-                <span>{meal.calories}</span>
-              </div>
-            </li>
+                  <span>{meal.name}</span>
+                </div>
+                <div className={classes.mealItem_meal_calories}>
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    data-icon="fire"
+                    role="img"
+                    viewBox="0 0 384 512"
+                    width="15"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M216 23.86c0-23.8-30.65-32.77-44.15-13.04C48 191.85 224 200 224 288c0 35.63-29.11 64.46-64.85 63.99-35.17-.45-63.15-29.77-63.15-64.94v-85.51c0-21.7-26.47-32.23-41.43-16.5C27.8 213.16 0 261.33 0 320c0 105.87 86.13 192 192 192s192-86.13 192-192c0-170.29-168-193-168-296.14z"
+                    />
+                  </svg>
+                  <span>{meal.calories}</span>
+                </div>
+              </li>
+            </CSSTransition>
           );
         })}
         <li className={classes.mealItem} key="total">
@@ -83,7 +90,7 @@ const CalorieTable = (props) => {
             <span>{total}</span>
           </div>
         </li>
-      </ul>
+      </TransitionGroup>
     </div>
   );
 };

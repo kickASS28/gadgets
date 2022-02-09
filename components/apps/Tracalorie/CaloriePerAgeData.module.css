@@ -10,6 +10,7 @@
 .table_container h3 {
   width: 100%;
   text-align: center;
+  margin-top: 0;
 }
 
 .table {
@@ -37,6 +38,7 @@
 @media screen and (max-width: 666px) {
   .table_container {
     width: 90%;
-    margin-top: 1.5rem;
+    margin: 0 auto;
+    margin-top: 2rem;
   }
 }

@@ -53,24 +53,17 @@ const MainNav = () => {
         mountOnEnter
         unmountOnExit
         timeout={300}
-        classNames={{
-          enter: "",
-          enterActive: "placeholderNavOpen",
-          exit: "",
-          exitActive: "placeholderNavClose",
-          appear: "",
-          appearActive: "",
-        }}
+        classNames="placeholdernav"
       >
         <nav className={classes.placeholder_nav}>
-          <div className={classes.placeholder_nav_brand}>
-            <Link href="/">
+          <Link href="/">
+            <div className={classes.placeholder_nav_brand}>
               <div>
                 <Brand fill="#fff" width="34" />
                 <h2 className={classes.brand}>Gadgets</h2>
               </div>
-            </Link>
-          </div>
+            </div>
+          </Link>
           <div
             className={classes.placeholder_nav_menu_icon}
             onClick={openMobileNavHandler}
@@ -84,24 +77,20 @@ const MainNav = () => {
         mountOnEnter
         unmountOnExit
         timeout={600}
-        classNames={{
-          enter: "",
-          enterActive: "MobileNavOpen",
-          exit: "",
-          exitActive: "MobileNavClosed",
-          appear: "",
-          appearActive: "",
-        }}
+        classNames="mobnav"
       >
         <nav className={classes.mobile_nav}>
-          <div className={classes.mobile_nav_brand}>
-            <Link href="/">
+          <Link href="/">
+            <div
+              className={classes.mobile_nav_brand}
+              onClick={closeMobileNavHandler}
+            >
               <div className={classes.mobile_nav_brand_link}>
                 <Brand fill="#fff" width="35" />
                 <h4 className={classes.brand}>Gadgets</h4>
               </div>
-            </Link>
-          </div>
+            </div>
+          </Link>
           <ul className={classes.mobile_nav_links}>
             <li onClick={closeMobileNavHandler}>
               <Link href="/health">
@@ -136,11 +125,11 @@ const MainNav = () => {
               </Link>
             </li>
           </ul>
-          <div className={classes.mobile_nav_brand}>
-            <div
-              className={classes.mobile_nav_icon_container}
-              onClick={closeMobileNavHandler}
-            >
+          <div
+            className={classes.mobile_nav_brand}
+            onClick={closeMobileNavHandler}
+          >
+            <div className={classes.mobile_nav_icon_container}>
               <MenuCLoseIcon fill="#fff" width="32" />
               <p>Close</p>
             </div>

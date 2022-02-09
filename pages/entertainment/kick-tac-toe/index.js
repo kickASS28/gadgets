@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Fragment } from "react";
+import { useState, Fragment } from "react";
 import classes from "./index.module.css";
 import Head from "next/head";
+import { CSSTransition } from "react-transition-group";
 
 const refBoard = {
   box1: "",
@@ -22,10 +22,9 @@ const KickTacToePage = () => {
 
   const [header, setHeader] = useState("Start Playing Now!");
 
-  const setMarker = (event) => {
-    const marker =
-      event.target.options[event.target.options.selectedIndex].value;
+  const setMarker = (marker) => {
     setTurn(marker);
+    console.log(marker);
   };
 
   const checkCombinations = (board, check) => {
@@ -113,17 +112,28 @@ const KickTacToePage = () => {
       </Head>
       <div className={classes.container}>
         <h2>{header}</h2>
-        {turn === "" && (
+        <CSSTransition
+          in={!turn}
+          timeout={350}
+          classNames="item"
+          mountOnEnter
+          unmountOnExit
+        >
           <div className={classes.input_box}>
             <label>Select Marker</label>
-            <select onChange={setMarker} defaultValue="">
-              <option></option>
-              <option>X</option>
-              <option>O</option>
-            </select>
+            <div className={classes.button_container}>
+              <button onClick={setMarker.bind(null, "X")}>X</button>
+              <button onClick={setMarker.bind(null, "O")}>O</button>
+            </div>
           </div>
-        )}
-        {turn !== "" && (
+        </CSSTransition>
+        <CSSTransition
+          in={turn}
+          timeout={350}
+          classNames="item"
+          mountOnEnter
+          unmountOnExit
+        >
           <div className={classes.playbox}>
             <table className={classes.game}>
               <tbody>
@@ -163,12 +173,18 @@ const KickTacToePage = () => {
               </tbody>
             </table>
           </div>
-        )}
-        {turn !== "" && (
+        </CSSTransition>
+        <CSSTransition
+          in={turn}
+          timeout={500}
+          classNames="item"
+          mountOnEnter
+          unmountOnExit
+        >
           <div className={classes.actions}>
             <button onClick={clearHandler}>Reset</button>
           </div>
-        )}
+        </CSSTransition>
       </div>
     </Fragment>
   );

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import classes from "./LoanCalculator.module.css";
+import { CSSTransition } from "react-transition-group";
 
 const LoanCalculator = () => {
   const [calculated, setCalculated] = useState(false);
@@ -81,49 +82,54 @@ const LoanCalculator = () => {
           </button>
         </div>
       </div>
-      <div
-        className={`${classes.inputs_container} ${
-          calculated ? "" : classes.hide
-        }`}
+      <CSSTransition
+        in={calculated}
+        mountOnEnter
+        unmountOnExit
+        classNames="fadein"
+        appear
+        timeout={300}
       >
-        <h3>Results</h3>
-        <div className={classes.input_container}>
-          <input
-            className={classes.input_result_text}
-            disabled
-            value="Monthly Payment"
-          />
-          <input
-            value={monthly}
-            className={classes.input_result_data}
-            disabled
-          />
+        <div className={classes.inputs_container}>
+          <h3>Results</h3>
+          <div className={classes.input_container}>
+            <input
+              className={classes.input_result_text}
+              disabled
+              value="Monthly Payment"
+            />
+            <input
+              value={monthly}
+              className={classes.input_result_data}
+              disabled
+            />
+          </div>
+          <div className={classes.input_container}>
+            <input
+              className={classes.input_result_text}
+              disabled
+              value="Total Payment"
+            />
+            <input
+              value={total_Payment}
+              className={classes.input_result_data}
+              disabled
+            />
+          </div>
+          <div className={classes.input_container}>
+            <input
+              className={classes.input_result_text}
+              disabled
+              placeholder="Total Interest"
+            />
+            <input
+              value={total_Interest}
+              className={classes.input_result_data}
+              disabled
+            />
+          </div>
         </div>
-        <div className={classes.input_container}>
-          <input
-            className={classes.input_result_text}
-            disabled
-            value="Total Payment"
-          />
-          <input
-            value={total_Payment}
-            className={classes.input_result_data}
-            disabled
-          />
-        </div>
-        <div className={classes.input_container}>
-          <input
-            className={classes.input_result_text}
-            disabled
-            placeholder="Total Interest"
-          />
-          <input
-            value={total_Interest}
-            className={classes.input_result_data}
-            disabled
-          />
-        </div>
-      </div>
+      </CSSTransition>
     </div>
   );
 };

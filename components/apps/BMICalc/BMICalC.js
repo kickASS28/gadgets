@@ -1,6 +1,7 @@
 import classes from "./BMICalc.module.css";
 import { useState, Fragment } from "react";
 import BMITable from "./BMITable";
+import { CSSTransition } from "react-transition-group";
 
 const BMICalC = () => {
   const [heightInput, setHeightInput] = useState("");
@@ -26,6 +27,10 @@ const BMICalC = () => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
+    if (weightInput === "" || heightInput === "") {
+      alert("Please Enter Valid Values");
+      return;
+    }
     var Bmi;
     if (unit === "kg/m2") {
       Bmi = weightInput / heightInput ** 2;
@@ -56,16 +61,6 @@ const BMICalC = () => {
           <h4>Enter your details</h4>
           <div className={classes.inputs_container}>
             <div className={classes.input_field}>
-              <label htmlFor="height">Height</label>
-              <input
-                id="height"
-                type="number"
-                placeholder="Enter Height"
-                onChange={heightInputChangeHandler}
-                value={heightInput}
-              />
-            </div>
-            <div className={classes.input_field}>
               <label htmlFor="calorie">Weight</label>
               <input
                 id="weight"
@@ -73,6 +68,16 @@ const BMICalC = () => {
                 placeholder="Enter Weight"
                 value={weightInput}
                 onChange={weightInputChangeHandler}
+              />
+            </div>
+            <div className={classes.input_field}>
+              <label htmlFor="height">Height</label>
+              <input
+                id="height"
+                type="number"
+                placeholder="Enter Height"
+                onChange={heightInputChangeHandler}
+                value={heightInput}
               />
             </div>
           </div>
@@ -107,7 +112,16 @@ const BMICalC = () => {
         </fieldset>
       </form>
       <div className={classes.data}>
-        <h1>BMI {BMI}</h1>
+        <CSSTransition
+          in={BMI}
+          mountOnEnter
+          unmountOnExit
+          timeout={400}
+          classNames="fadein"
+          appear
+        >
+          <h1>BMI {BMI}</h1>
+        </CSSTransition>
         <BMITable />
       </div>
     </Fragment>

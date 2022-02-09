@@ -69,6 +69,12 @@
   }
 }
 
+@media screen and (max-width: 806px) {
+  .container {
+    margin-top: 7rem;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .container {
     width: 80%;

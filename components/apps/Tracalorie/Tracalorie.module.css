@@ -93,6 +93,12 @@
   }
 }
 
+@media screen and (max-width: 806px) {
+  .fieldset {
+    margin-top: 7rem;
+  }
+}
+
 @media screen and (max-width: 666px) {
   .data {
     flex-direction: column;
