@@ -65,7 +65,6 @@
   padding: 0.5rem 3rem;
   align-items: center;
   color: white;
-  display: none;
 }
 
 .placeholder_nav_menu_icon {
@@ -150,6 +149,12 @@
 }
 
 @media screen and (max-width: 806px) {
+  .placeholder_nav_brand h2 {
+    font-size: small;
+  }
+  .placeholder_nav_brand svg {
+    width: 40%;
+  }
   .nav {
     display: none;
   }
@@ -159,12 +164,6 @@
 }
 
 @media screen and (max-width: 500px) {
-  .placeholder_nav_brand h2 {
-    font-size: small;
-  }
-  .placeholder_nav_brand svg {
-    width: 40%;
-  }
   .placeholder_nav {
     padding: 0.35rem 1.5rem;
   }
