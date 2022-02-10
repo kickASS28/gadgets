@@ -99,10 +99,10 @@
 
   .app_flex {
     margin: 1.5rem auto;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2.5rem;
   }
 
   .app_flex h5 {
@@ -122,10 +122,10 @@
     align-items: left;
     justify-content: center;
     gap: 0.6rem;
-    width: 45%;
+    width: 70%;
     height: 16rem;
     border-radius: 0.5rem;
-    padding: 0.8rem;
+    padding: 1.2rem;
     font-size: 0.8rem;
     box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.4);
   }
@@ -153,9 +153,6 @@
   .app_container {
     width: 100%;
   }
-  .app_flex {
-    gap: 0.5rem;
-  }
 
   .description p {
     margin: 0.5rem 0;
@@ -166,9 +163,5 @@
 
   .app_flex h5 {
     font-size: 0.85rem;
-  }
-
-  .app_flex h5 svg {
-    width: 46%;
   }
 }

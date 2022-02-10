@@ -103,9 +103,8 @@
 
 @media screen and (max-width: 900px) {
   .verticals {
-    margin-left: 0;
-    margin: 3rem 2rem;
-    width: 90%;
+    margin: 3rem auto;
+    width: 65%;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
   }
@@ -136,7 +135,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .verticals {
     margin: 2rem 1.5rem;
     width: 95%;
@@ -145,5 +144,71 @@
     line-height: 2;
     width: 80%;
     font-size: small;
+  }
+
+  .health,
+  .finance,
+  .well_being,
+  .entertainment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 403px) {
+  .verticals {
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    border-top: 1px solid gray;
+    height: fit-content;
+  }
+  .health {
+    grid-column: 1;
+    grid-row: 1/2;
+  }
+
+  .finance {
+    grid-column: 1;
+    grid-row: 2/3;
+  }
+
+  .well_being {
+    grid-column: 1;
+    grid-row: 3/4;
+  }
+
+  .entertainment {
+    grid-column: 1;
+    grid-row: 4/-1;
+  }
+  .description {
+    line-height: 2;
+    width: 100%;
+    font-size: small;
+  }
+  .description p {
+    width: 100%;
+  }
+
+  .health,
+  .finance,
+  .well_being,
+  .entertainment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px dashed gray;
+  }
+  .name {
+    margin: 1rem 0;
   }
 }
