@@ -8,6 +8,7 @@ const Home = () => {
     <Fragment>
       <Head>
         <title>Gadgets</title>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
         <meta
           name="description"
           content="One App that holds all your needs (Calorie Tracker, BMI Calculator, Loan-Interest Calculator, Finance and Sports news and updates, Weather reports, games and much more.)"
