@@ -9,6 +9,7 @@ const EntertainmentPage = () => {
     <Fragment>
       <Head>
         <title>Gadgets-Entertainment</title>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
         <meta
           name="description"
           content="One App for your Entertainment needs. (Games, communities, jokes and more.)"
