@@ -11,6 +11,7 @@ const FinanceNewsPage = () => {
           name="description"
           content="Get Most trending finance news and updates world-wide"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="icon"
           href="https://www.freeiconspng.com/uploads/tool-icon-20.png"

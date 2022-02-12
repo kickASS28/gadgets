@@ -68,6 +68,7 @@ const WeatherJSAPP = () => {
           name="description"
           content="Get all weather details, Scientific weather data and realtime weather updates."
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="icon"
           href="https://www.freeiconspng.com/uploads/tool-icon-20.png"

@@ -105,6 +105,7 @@ const KickTacToePage = () => {
           name="description"
           content="Play Tic Tac Toe with friends and family"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="icon"
           href="https://www.freeiconspng.com/uploads/tool-icon-20.png"

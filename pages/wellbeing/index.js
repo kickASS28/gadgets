@@ -13,6 +13,7 @@ const WellbeingPage = () => {
           name="description"
           content="One App for your well being. (Track Weather, Weather reports, Sports news, and updates)"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="icon"
           href="https://www.freeiconspng.com/uploads/tool-icon-20.png"

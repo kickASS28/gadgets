@@ -11,6 +11,7 @@ const SportsPage = () => {
           name="description"
           content="Stay ahead, stay active with all the sports updates and news"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="icon"
           href="https://www.freeiconspng.com/uploads/tool-icon-20.png"
