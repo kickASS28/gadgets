@@ -52,7 +52,7 @@ const MainNav = () => {
         in={!mobileNavIsVisible}
         mountOnEnter
         unmountOnExit
-        timeout={300}
+        timeout={450}
         classNames="placeholdernav"
       >
         <nav className={classes.placeholder_nav}>
@@ -68,7 +68,7 @@ const MainNav = () => {
             className={classes.placeholder_nav_menu_icon}
             onClick={openMobileNavHandler}
           >
-            <MenuIcon fill="#fff" width="30" />
+            <MenuIcon fill="#fff" width="20" />
           </div>
         </nav>
       </CSSTransition>
@@ -76,7 +76,7 @@ const MainNav = () => {
         in={mobileNavIsVisible}
         mountOnEnter
         unmountOnExit
-        timeout={600}
+        timeout={450}
         classNames="mobnav"
       >
         <nav className={classes.mobile_nav}>
@@ -124,16 +124,16 @@ const MainNav = () => {
                 </div>
               </Link>
             </li>
+            <li>
+              <div
+                className={classes.mobile_nav_icon_container}
+                onClick={closeMobileNavHandler}
+              >
+                <MenuCLoseIcon fill="#fff" width="32" />
+                <p>Exit</p>
+              </div>
+            </li>
           </ul>
-          <div
-            className={classes.mobile_nav_brand}
-            onClick={closeMobileNavHandler}
-          >
-            <div className={classes.mobile_nav_icon_container}>
-              <MenuCLoseIcon fill="#fff" width="32" />
-              <p>Close</p>
-            </div>
-          </div>
         </nav>
       </CSSTransition>
     </header>

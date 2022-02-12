@@ -37,7 +37,7 @@ a {
 .mobnav-enter-active {
   opacity: 1;
   transform: translateX(0);
-  transition: all 300ms ease;
+  transition: all 450ms ease;
 }
 .mobnav-exit {
   opacity: 1;
@@ -46,7 +46,7 @@ a {
 .mobnav-exit-active {
   opacity: 0;
   transform: translateX(-100%);
-  transition: all 300ms ease;
+  transition: all 450ms ease;
 }
 
 .placeholdernav-enter {
@@ -56,7 +56,7 @@ a {
 .placeholdernav-enter-active {
   opacity: 1;
   transform: translateX(0);
-  transition: all 300ms ease;
+  transition: all 450ms ease;
 }
 .placeholdernav-exit {
   opacity: 1;
@@ -65,7 +65,7 @@ a {
 .placeholdernav-exit-active {
   opacity: 0;
   transform: translateX(-100%);
-  transition: all 300ms ease;
+  transition: all 450ms ease;
 }
 
 .fadein-enter {
@@ -73,12 +73,12 @@ a {
 }
 .fadein-enter-active {
   opacity: 1;
-  transition: all 400ms ease;
+  transition: all 500ms ease;
 }
 .fadein-exit {
   opacity: 1;
 }
 .fadein-exit-active {
   opacity: 0;
-  transition: all 400ms ease;
+  transition: all 500ms ease;
 }

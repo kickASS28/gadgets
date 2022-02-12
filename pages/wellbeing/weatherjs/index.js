@@ -118,7 +118,7 @@ const WeatherJSAPP = () => {
               </li>
               <li key="Temperature">
                 <span>{`Temperature`}</span>
-                <p>{gotData ? `${weatherObj.main.temp} (℉)` : ""}</p>
+                <p>{gotData ? `${weatherObj.main.temp} (F)` : ""}</p>
               </li>
             </ul>
             <div className={classes.actions}>
