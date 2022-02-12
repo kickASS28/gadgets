@@ -14,6 +14,7 @@ const CalorieTable = (props) => {
         {props.meals.map((meal) => {
           return (
             <CSSTransition
+              in="true"
               key={meal.name}
               classNames="placeholdernav"
               timeout={300}
